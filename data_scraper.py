@@ -23,7 +23,7 @@ def get_reservations():
     driver.implicitly_wait(10)
     
     #get today's reservation table
-    todays_reservation_table = soup.find('a', id=f"{date.tomorrow()}").findNext("table")
+    todays_reservation_table = soup.find('a', id=f"{date.today()}").findNext("table")
 
     # Wait for the reservations to be present
     reservations_locator = (By.CLASS_NAME, "reserved")
